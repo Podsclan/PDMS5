@@ -5,10 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import org.mariuszgromada.math.mxparser.*;
 
 public class MainActivity extends AppCompatActivity {
     private TextView visorTv;
-    private String visor;
+    private String visor = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +24,10 @@ public class MainActivity extends AppCompatActivity {
         String buttonText = b.getText().toString();
         if (buttonText.equals("limpar (C)")) {
             visor = "";
+        } else if (buttonText.equals("=")){
+            Expression e = new Expression(visor);
+            visor = Double.toString(e.calculate());
         } else {
-            System.out.println(buttonText);
             visor = visor.concat(buttonText);
         }
 

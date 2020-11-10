@@ -14,7 +14,7 @@
     <string name="sete">7</string>
     <string name="mais">+</string>
     <string name="menos">-</string>
-    <string name="multiplica">X</string>
+    <string name="multiplica">*</string>
     <string name="divide">/</string>
     <string name="resultadoBt">=</string>
     <string name="decimalBt">.</string>
